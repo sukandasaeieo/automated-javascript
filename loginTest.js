@@ -1,7 +1,7 @@
 const { Builde, Builder, By, Key, until } = require("selenium-webdriver");
 
 async function loginTest() {
-  //lauch the browser
+  //launch the browser
   let driver = await new Builder().forBrowser("chrome").build();
 
   try {
@@ -12,13 +12,12 @@ async function loginTest() {
     await driver.findElement(By.id("username")).sendKeys("practice");
     await driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
 
-    // Select login button and invoke click action
+    // Select login button and click action
     await driver.findElement(By.css("button[type='submit']")).click();
 
     await driver.wait(
       until.elementLocated(driver.findElement(By.css(".alert-success")), 50000)
     );
-
 
   } catch (error) {
     console.error("An error occurred:", error);
