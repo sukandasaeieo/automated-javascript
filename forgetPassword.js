@@ -1,6 +1,6 @@
 const { Builde, Builder, By, Key, until } = require("selenium-webdriver");
 
-async function loginTest() {
+async function forgetPassword() {
   //launch the browser
   let driver = await new Builder().forBrowser("chrome").build();
 
