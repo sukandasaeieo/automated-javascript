@@ -28,4 +28,4 @@ async function loginTest() {
   }
 }
 
-loginTest();
+forgetPassword();
